@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title></title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            user-select: none;
+            /* font-family: 'Luciad Sans','Luciad Sans Redular','Lucida Grande'; */
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            text-align: center;
+        }
+
+        .center ul{
+            list-style: none;
+            position: relative;
+            display: inline-block;
+        }
+
+        .center ul .text{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #0077ff;
+            color: white;
+            line-height: 50px;
+            border-radius: 50px;
+            font-size: 22px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            pointer-events: none;    
+            transition: opacity .5s .125s ease-out;
+        }
+
+        .center ul:hover .text{
+            opacity: 0;
+            transition: opacity .5s .125s ease-out;
+        }
+
+        .center ul li{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background: #0077ff;
+            line-height: 55px;
+            margin: 0px -10px;
+            cursor: pointer;
+            border-radius: 0;
+            transition: background-color .5s ease-out, 
+            border-radius .5s .25s ease-out,
+            margin .5s .25s ease-out;
+        }
+
+        .center ul li:hover{
+            background: #5aadff;
+        }
+
+        .center ul li i{
+            color: white;
+            font-size: 22px;
+            opacity: 0;
+            transition: opacity 1.7s;
+        }
+
+        .center ul:hover li i{
+            opacity: 1;
+        }
+
+        .center ul li:nth-child(1){
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 25px;
+        }
+
+        .center ul li:nth-child(5){
+            border-bottom-right-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+
+        .center ul:hover li{
+            border-radius: 50px;
+            margin: 0 3px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <ul>
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-linkedin"></i></li>
+            <li><i class="fab fa-youtube"></i></li>
+           <div class="text">Sosyal Medya</div>
+        </ul>
+    </div>
+    <script src="https://kit.fontawesome.com/8e72acd36a.js" crossorigin="anonymous"></script>
+</body>
+</html>
