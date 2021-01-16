@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-shadow: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: rgb(59, 59, 59);
+        }
+        .txt{
+            position: relative;
+            font-size: 120px;
+            letter-spacing: 5px;
+            font-weight: 900;
+            color: rgb(207,207,207);
+            text-shadow:
+            0px 0px 1px rgb(168, 167, 167),
+            0px 1px 1px rgb(168, 167, 167),
+            0px 2px 1px rgb(168, 167, 167),
+            
+            1px 1px 1px rgb(168, 167, 167),
+            1px 2px 1px rgb(168, 167, 167),
+            1px 3px 1px rgb(168, 167, 167),
+            
+            2px 2px 1px rgb(168, 167, 167),
+            2px 3px 1px rgb(168, 167, 167),
+            2px 4px 1px rgb(168, 167, 167),
+
+            1px 10px 30px rgb(0, 0, 0,0.8),
+            1px 10px 70px rgb(0, 0, 0,0.8),
+
+            0px 5px 5px rgba(0,0,0,0.8),
+
+            -5px 5px 20px rgba(0,0,0,0.8),
+
+            5px 5px 20px rgba(0,0,0,0.8),
+
+            1px 1px 120px rgba(255,255,255,0.5);
+        } 
+
+        .txt::after{
+            content: 'DevopMind';
+            font-size: 120px;
+            letter-spacing: 5px;
+            font-weight: 900;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-shadow: 0px 0px 100px rgba(11,124,199,0.5);
+            animation: cycle 10s linear infinite;
+        }
+        @keyframes cycle{
+            0%{text-shadow: 0px 0px 100px rgba(11,124,199,0.5);}
+            20%{text-shadow: 0px 0px 100px rgba(234, 0, 255, 0.5);}
+            40%{text-shadow: 0px 0px 100px rgb(54, 190, 0,0.5);}
+            60%{text-shadow: 0px 0px 100px rgba(199, 11, 11, 0.5);}
+            80%{text-shadow: 0px 0px 100px rgb(199, 96, 11,0.5);}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="txt">DevopMind</div>
+</body>
+</html>
