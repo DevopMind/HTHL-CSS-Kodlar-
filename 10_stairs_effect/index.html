@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevopMind</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 132, 255);
+            overflow: hidden;
+        }
+        .perspective-text {
+            color: white;
+            font-family: Arial;
+            font-size: 58px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-top: 120px;
+        }
+        .perspective-line {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+        p {
+            margin: 0;
+            height: 50px;
+            line-height: 50px;
+            transition: all 0.5s ease-in-out;
+        }
+        .perspective-line:nth-child(odd) {
+            transform: skew(60deg, -30deg) scaleY(0.667);
+        }
+            .perspective-line:nth-child(even) {
+            transform: skew(0deg, -30deg) scaleY(1.333);
+        }
+        
+        .perspective-text:hover p{
+            transform: translate(0, -50px);
+            cursor: pointer;
+        }
+        .perspective-line {
+            position: relative;
+        }
+        
+        .perspective-line:nth-child(1){
+            left: 29px;
+        }
+        .perspective-line:nth-child(2){
+            left: 58px;
+        }
+        .perspective-line:nth-child(3){
+            left: 87px;
+        }
+        .perspective-line:nth-child(4){
+            left: 116px;
+        }
+        .perspective-line:nth-child(5){
+            left: 145px;
+        }
+    </style>
+</head>
+<body>
+    <div class="perspective-text">
+        <div class="perspective-line">
+          <p></p>
+          <p>Learn</p>
+        </div>
+        <div class="perspective-line">
+          <p>Learn</p>
+          <p>More fun </p>
+        </div>
+        <div class="perspective-line">
+          <p>More fun</p>
+          <p>Programming</p>
+        </div>
+        <div class="perspective-line">
+          <p>Programming</p>
+          <p>With Devop Mind</p>
+        </div>
+        <div class="perspective-line">
+          <p>With Devop Mind</p>
+          <p></p>
+        </div>
+    </div>
+</body>
+</html>
