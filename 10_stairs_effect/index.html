@@ -16,6 +16,23 @@
             background-color: rgb(0, 132, 255);
             overflow: hidden;
         }
+        .navbar{
+            width: 100%;
+            height: 6vh;
+            font-size: 26px;
+            padding: 5px 5px;
+            top: 0;
+            left: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: url('https://scontent.fgyd6-1.fna.fbcdn.net/v/t1.0-1/p200x200/105043843_110309580730543_1478479890119962470_o.jpg?_nc_cat=106&ccb=2&_nc_sid=1eb0c7&_nc_ohc=ZKTHGql6psYAX9khR7Z&_nc_ht=scontent.fgyd6-1.fna&tp=6&oh=afca55f7add0e61bac51ed48fbc6dd51&oe=6040F2A2') rgb(255, 255, 255) 20px no-repeat;
+            background-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+        /* Navbar end ------------------------- */
+
         .perspective-text {
             color: white;
             font-family: Arial;
@@ -24,6 +41,8 @@
             letter-spacing: -1px;
             text-transform: uppercase;
             margin-top: 120px;
+            position: absolute;
+            top: 10%;
         }
         .perspective-line {
             height: 50px;
@@ -69,6 +88,7 @@
     </style>
 </head>
 <body>
+    <div class="navbar"><span>Pilləkan mətn effekti</span></div>
     <div class="perspective-text">
         <div class="perspective-line">
           <p></p>
