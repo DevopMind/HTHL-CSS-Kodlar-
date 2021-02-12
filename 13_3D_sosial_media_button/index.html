@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevopMind</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 132, 255);
+            overflow: hidden;
+
+        }
+        .navbar{
+            width: 100%;
+            height: 6vh;
+            font-size: 26px;
+            padding: 5px 5px;
+            top: 0;
+            left: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: url('https://scontent.fgyd6-1.fna.fbcdn.net/v/t1.0-1/p200x200/105043843_110309580730543_1478479890119962470_o.jpg?_nc_cat=106&ccb=2&_nc_sid=1eb0c7&_nc_ohc=ZKTHGql6psYAX9khR7Z&_nc_ht=scontent.fgyd6-1.fna&tp=6&oh=afca55f7add0e61bac51ed48fbc6dd51&oe=6040F2A2') rgb(255, 255, 255) 20px no-repeat;
+            background-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+        /* Navbar end ------------------------- */
+        
+        .instagram-btn {
+            width: 10rem;
+            height: 2.1rem;
+            padding: 0.275rem 0.375rem 0;
+            background: #eee;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            perspective: 30rem;
+            top: 45%;
+            left: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cover{
+            transform-origin: center bottom;
+            transform-style: preserve-3d;
+            text-align: center;
+            z-index: 1;
+            
+        }
+
+        .cover, .cover > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cover img {
+            margin-top: 2px;
+            width: 35px;
+            filter:drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+        }
+
+        .inner, .cover {
+            border-radius: 0.25rem;
+
+        }
+        .inner {
+            background-color: #db124e;
+            border-radius: 0.25rem;
+
+        }
+        .outer {
+            background-color: #E00138;
+            border-radius: 0.25rem;
+            transform: translateZ(0.25rem);
+        }
+        .edge {
+            background-color: #D8014A;
+            border-radius: 0.25rem;
+            top: 0.05rem;
+            height: 0.25rem;
+            transform: rotateX(90deg);
+            transform-origin: center top;
+        }
+
+        .instagram-btn:hover .cover{
+            transform: rotateX(-120deg);
+        }   
+
+        .instagram-btn, .instagram-btn div{
+            transition-duration: 0.7s;
+            transition-timing-function: ease;
+        }
+
+        .shadow {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 3.2rem;
+            opacity: 0;
+            border-radius: 0.5rem;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 100%);
+            transform: rotateX(90deg);
+            transform-origin: center top;
+        }
+        
+        .instagram-btn:hover .shadow{
+            transform: rotateX(45deg) scale(0.95);
+            opacity: 1;
+        }
+
+        .follow {
+            background: #0095F6;
+            border-radius: 2px 2px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            padding: 5px 0px 5px 0px;
+            width: 70px;
+            margin-top: -4px;
+            color: white;
+            cursor: pointer;
+        }
+        .link{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar"><span>3D Social Media Button</span></div>
+        
+    <div class="instagram-btn">
+        <a href="https://www.instagram.com/devop_mind/" target="_blank" class="link" >
+            <div class="follow">
+                Follow
+            </div>
+        </a>
+        <div class="cover">
+            <div class="inner">
+                <img src="https://i1.wp.com/zephyrstudiosla.com/wp-content/uploads/2018/01/best-solutions-of-instagram-png-transparent-png-images-unique-white-instagram-logo-outline-of-white-instagram-logo-outline-copy.png?ssl=1" >
+            </div>
+            <div class="edge"></div>
+            <div class="outer">
+                <img src="https://i1.wp.com/zephyrstudiosla.com/wp-content/uploads/2018/01/best-solutions-of-instagram-png-transparent-png-images-unique-white-instagram-logo-outline-of-white-instagram-logo-outline-copy.png?ssl=1">
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</body>
+</html>
