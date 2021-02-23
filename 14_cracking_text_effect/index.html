@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevopMind</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+        }
+        .navbar{
+            width: 100%;
+            height: 6vh;
+            font-size: 26px;
+            padding: 5px 5px;
+            top: 0;
+            left: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: url('https://scontent.fgyd6-1.fna.fbcdn.net/v/t1.0-1/p200x200/105043843_110309580730543_1478479890119962470_o.jpg?_nc_cat=106&ccb=2&_nc_sid=1eb0c7&_nc_ohc=ZKTHGql6psYAX9khR7Z&_nc_ht=scontent.fgyd6-1.fna&tp=6&oh=afca55f7add0e61bac51ed48fbc6dd51&oe=6040F2A2') rgb(255, 255, 255) 20px no-repeat;
+            background-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+        /* Navbar end ------------------------- */
+        
+        .wrapper{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cracked{
+            font-family:Impact, sans-serif;
+            font-size: 10rem;
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            animation: glow 2s linear infinite; 
+            animation-direction: alternate ;
+        }    
+
+        .cracked span:nth-child(1),
+        .cracked span:nth-child(3){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .cracked span:nth-child(1){
+            clip-path: polygon(-10% 0%, 10% 0%, 60% 100%, -10% 100%);
+            animation: crack1 0.2s linear forwards;
+        }
+        .cracked span:nth-child(2){
+            clip-path: polygon(10% 0%, 40% 0%, 80% 100%, 60% 100%);
+        
+        }
+        .cracked span:nth-child(3){
+            clip-path: polygon(40% 0%, 110% 0%, 110% 100%, 80% 100%);
+            /* transform:  translate(2%,-1%) rotateZ(1deg); */
+            animation: crack2 0.2s linear forwards;
+        }
+
+        @keyframes crack1{
+            0% {transform: translate(0%,0%);}
+            100% {transform: translate(-2%, 1%) rotateZ(1deg)}
+        }
+        
+        @keyframes crack2{
+            0% {transform: translate(0%,0%);}
+            100% {transform: translate(2%, -1%) rotateZ(1deg)}
+        }
+
+        @keyframes glow{
+            0%{
+                text-shadow: 0 0 3rem #ff22226e;
+                filter: brightness(150%) blur(0.14rem);
+            }
+            100%{
+                text-shadow: 0 0 3rem #224aff6e;
+                filter: brightness(150%) blur(0.06rem);
+            }
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="navbar"><span>Cracking Text Effect</span></div>
+
+     <div class="wrapper">
+         <div class="cracked">
+            <span>Devop Mind</span>
+            <span>Devop Mind</span>
+            <span>Devop Mind</span>
+        </div>
+     </div>
+
+</body>
+</html>
